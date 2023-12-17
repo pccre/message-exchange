@@ -1,6 +1,6 @@
 module github.com/pccre/message-exchange
 
-go 1.21.3
+go 1.20
 
 require (
 	github.com/gofiber/contrib/websocket v1.3.0
@@ -18,6 +18,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.15 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/pccre/utils v0.0.0-20231217200913-51f9ea9d08c0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/savsgio/gotils v0.0.0-20230208104028-c358bd845dee // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
