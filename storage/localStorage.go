@@ -1,18 +1,18 @@
 package storage
 
 import (
-	"os"
-	"sync"
+  "os"
+  "sync"
 
-	jsoniter "github.com/json-iterator/go"
+  "github.com/pccre/utils/c"
 )
 
-var json = jsoniter.ConfigFastest
+var json = c.JSON
 
 type LocalStorage struct {
   Filename string
   Items    map[string][]interface{}
-  Mut *sync.RWMutex
+  Mut      *sync.RWMutex
 }
 
 func (s *LocalStorage) Load() {
