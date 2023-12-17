@@ -7,7 +7,7 @@ Chat server reimplementation for PC Creator 2
 There are currently no publicly available instances to use. If you run an instance and want to be featured here, open a pull request or an issue.
 
 # Compatibility
-The server does not behave 1 to 1 with the game one. Though, the behaviour is pretty similar so this works with the game.
+The server does not behave 1 to 1 with the game one. However, the behaviour is pretty similar, so this works with the game.
 
 # Building
 You must have the [Go programming language](https://go.dev) installed
