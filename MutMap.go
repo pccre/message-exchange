@@ -18,3 +18,4 @@ func (m *MutMap) Get(key string) Channel {
 	defer m.Mut.RUnlock()
 	return m.Map[key]
 }
+ 
