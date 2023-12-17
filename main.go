@@ -213,7 +213,6 @@ func main() {
 				break
 			}
 
-			log.Println(string(msg))
 			err = json.Unmarshal(msg, &parsed)
 			if err != nil {
 				c.WriteJSON(Response{Method: "OnMessage", Content: `[ERROR] Invalid content! You must pass JSON like this: {"method": "methodName", "args": "arguments"}`})
