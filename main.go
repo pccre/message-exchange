@@ -14,15 +14,17 @@ import (
 	"github.com/pccre/message-exchange/storage"
 )
 
-var methodsList string
-var json = jsoniter.ConfigFastest
-var pool = MutMap{Mut: &sync.RWMutex{}, Map: map[string]Channel{}}
-var store storage.Storage = &storage.LocalStorage{Filename: "relationships.json"}
-
 const greetingEnabled = true
 const greeterUsername = "<color=red>System</color>"
 const messageLengthLimit = 300
 const messageLogLimit = 30
+
+var wsConfig = websocket.Config{EnableCompression: true}
+var json = jsoniter.ConfigFastest
+
+var methodsList string
+var pool = MutMap{Mut: &sync.RWMutex{}, Map: map[string]Channel{}}
+var store storage.Storage = &storage.LocalStorage{Filename: "relationships.json"}
 
 func isChat(channel string) bool {
 	return channel == "PCC2.Main" || strings.HasPrefix(channel, "Creaty.PCC2.")
@@ -237,7 +239,7 @@ func main() {
 			}
 		}
 
-	}))
+	}, wsConfig))
 
 	log.Fatal(http.Listen(":8081"))
 }
