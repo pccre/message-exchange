@@ -71,8 +71,9 @@ func removeFromPool(channel string, c *MutWS) bool {
 }
 
 func BroadcastJSON(id string, content interface{}) {
+  data, _ := json.Marshal(content)
 	for _, c := range pool.Get(id).Users {
-		c.WriteJSON(content)
+		c.WriteRaw(data)
 	}
 }
 
