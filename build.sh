@@ -1,0 +1,1 @@
+go build main.go structs.go MutWS.go MutMap.go
