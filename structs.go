@@ -1,5 +1,7 @@
 package main
 
+import "github.com/pccre/utils/Mut"
+
 type Message struct {
 	Method  string      `json:"method"`
 	Content interface{} `json:"args"`
@@ -17,5 +19,5 @@ type SentMessage struct {
 
 type Channel struct {
 	LastMessages []interface{}
-	Users        []*MutWS
+	Users        []*Mut.WS
 }
