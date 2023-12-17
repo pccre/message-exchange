@@ -210,7 +210,7 @@ func main() {
 				for key := range pool.Map {
 					removeFromPool(key, c)
 				}
-				break
+				return
 			}
 
 			err = json.Unmarshal(msg, &parsed)
