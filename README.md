@@ -3,6 +3,9 @@ Chat server reimplementation for PC Creator 2
 
 ![Screenshot of a PC Creator 2 mod connected to an instance of this server](misc/example.jpg)
 
+# Compatibility
+The server does not behave 1 to 1 with the game one. Though, the behaviour is pretty similar so this works with the game.
+
 # Building
 You must have the [Go programming language](https://go.dev) installed
 1. Clone the repository
