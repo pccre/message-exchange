@@ -4,7 +4,7 @@ import "sync"
 
 type MutMap struct {
 	Map map[string]Channel
-	Mut *sync.RWMutex
+	Mut *sync.RWMutex 
 }
 
 func (m *MutMap) Set(key string, value Channel) {
