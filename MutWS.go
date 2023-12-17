@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"sync"
 
 	"github.com/gofiber/contrib/websocket"
@@ -19,6 +18,5 @@ func (c *MutWS) WriteJSON(content interface{}) error {
 	}
 	c.Mut.Lock()
 	defer c.Mut.Unlock()
-	log.Println(string(data))
 	return c.WS.WriteMessage(1, data)
 }
