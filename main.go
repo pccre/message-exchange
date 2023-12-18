@@ -20,7 +20,7 @@ import (
 // FEEL FREE TO CONFIGURE
 // Greeting
 const greetingEnabled bool = true
-const greeterUsername string = "  "
+const greeterUsername string = "<color=red>System</color>"
 
 // Limits
 const messageLengthLimit int = 300
