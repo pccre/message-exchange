@@ -17,21 +17,19 @@ import (
 	"github.com/pccre/utils/shared"
 )
 
-const greetingEnabled = true
-const greeterUsername = "<color=red>System</color>"
-const messageLengthLimit = 300
-const messageLogLimit = 30
+// FEEL FREE TO CONFIGURE
+// Greeting
+const greetingEnabled bool = true
+const greeterUsername string = "  "
 
-var json = c.JSON
+// Limits
+const messageLengthLimit int = 300
+const messageLogLimit int = 30
 
-var methodsList string
-var pool = Mut.Map[string, Channel]{Mut: &sync.RWMutex{}, Map: map[string]Channel{}}
+// Storage
 var store storage.Storage = &storage.LocalStorage{Filename: "relationships.json"}
 
-func isChat(channel string) bool {
-	return channel == "PCC2.Main" || strings.HasPrefix(channel, "Creaty.PCC2.")
-}
-
+// Advanced Greeting Configuration
 func makeGreeting(channel string) map[string]interface{} {
 	r := map[string]interface{}{}
 	if channel == "PCC2.Main" {
@@ -47,6 +45,16 @@ func makeGreeting(channel string) map[string]interface{} {
 	r["sender"] = "reserved"
 	r["isPremium"] = false
 	return r
+}
+
+var json = c.JSON
+
+// CODE STARTS HERE
+var methodsList string
+var pool = Mut.Map[string, Channel]{Mut: &sync.RWMutex{}, Map: map[string]Channel{}}
+
+func isChat(channel string) bool {
+	return channel == "PCC2.Main" || strings.HasPrefix(channel, "Creaty.PCC2.")
 }
 
 type MethodHandler func(c *Mut.WS, content interface{})
