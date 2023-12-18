@@ -6,6 +6,10 @@ Chat server reimplementation for PC Creator 2
 # Public Instances
 There are currently no publicly available instances to use. If you run an instance and want to be featured here, open a pull request or an issue.
 
+# Improvements
+- Strict content structure checking
+- Greeting message
+
 # Compatibility
 The server does not behave 1 to 1 with the game one. However, the behaviour is pretty similar, so this works with the game.
 
