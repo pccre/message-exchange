@@ -47,9 +47,9 @@ func makeGreeting(channel string) map[string]interface{} {
 	return r
 }
 
-var json = c.JSON
-
 // CODE STARTS HERE
+
+var json = c.JSON
 var methodsList string
 var pool = Mut.Map[string, Channel]{Mut: &sync.RWMutex{}, Map: map[string]Channel{}}
 
