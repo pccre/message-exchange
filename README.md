@@ -15,6 +15,8 @@ You can configure some of the things to your liking!
 
 You will have to edit the code slightly, but it's nothing too hard!
 
+For more advanced configurations, you will likely need programming experience, preferrably in Go
+
 You can find the configuration values at the top of the file, right after the imports
 ## Greeting Configuration
 ### greetingEnabled (`boolean`)
