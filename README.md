@@ -34,18 +34,18 @@ You can edit the `makeGreeting` function to your liking!
 
 ## Limits
 ### messageLengthLimit (`int`)
-> Default: 300
+> Default: `300`
 
 Max message length. Messages with length above it will just be dropped with no error.
 
 ### messageLogLimit (`int`)
-> Default: 30
+> Default: `30`
 
 How many messages the server should log in memory.
 
 ## Storage
 ### Filename (`string`)
-> Default: relationships.json
+> Default: `relationships.json`
 
 The JSON file name to store relationships in.
 
